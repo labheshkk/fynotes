@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+    background-color: #0d0d0d;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+h1, p {
+    margin: 0;
+}
+
+/* Loading Screen Styles */
+#loading-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#loading-screen h1 {
+    font-size: 3em;
+    color: #00ffcc;
+    text-shadow: 0px 0px 10px #00ffcc;
+}
+
+#loading-screen p {
+    font-size: 1.2em;
+    color: #ffd700;
+    text-shadow: 0px 0px 10px #ffd700;
+}
+
+/* Fade-out animation for loading screen */
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Subjects Page Styles */
+#subjects-page {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.subject-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.subject-list li {
+    margin: 15px 0;
+}
+
+.subject-list li a {
+    text-decoration: none;
+    color: #00ffcc;
+    font-size: 1.5em;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    text-shadow: 0px 0px 10px #00ffcc;
+}
+
+.subject-list li a:hover {
+    color: #ffffff;
+    text-shadow: 0px 0px 20px #00ffcc, 0px 0px 30px #ffffff;
+}
+
+/* Text Reveal Animation */
+.reveal-text {
+    opacity: 0;
+    position: relative;
+    animation: revealText 2s forwards ease-in-out;
+}
+
+@keyframes revealText {
+    0% {
+        opacity: 0;
+        top: 20px;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
